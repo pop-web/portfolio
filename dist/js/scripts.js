@@ -65,3 +65,23 @@
 window.onload = function() {
     new WOW().init();
 }
+
+var loading = document.getElementById('loading');
+var contents = document.getElementById('page-top');
+// 読み込みが完了したら#contentsを表示して#loadingとその親要素を非表示に
+window.addEventListener('load', function () {
+    loading.classList.add('d-none');
+    loading.parentNode.classList.replace('vh-100', 'd-none');
+    contents.classList.remove('d-none');
+});
+
+// Reloadするときはロード中がわかるように3秒後に表示
+const reload = document.querySelector('#reload');
+reload.addEventListener('click', () => {
+    loading.classList.remove('d-none');
+    loading.parentNode.classList.replace('d-none', 'vh-100');
+    contents.classList.add('d-none');
+    window.setTimeout(() => {
+        window.location.reload(true);
+    }, 3000);
+});

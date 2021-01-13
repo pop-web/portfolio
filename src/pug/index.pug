@@ -30,7 +30,10 @@ html(lang='en')
         link(href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css', rel='stylesheet')
 
     body#page-top
-
+        // Loading
+        .d-flex.justify-content-center.align-items-center.vh-100.bg-dark
+            #loading.spinner-border.text-white(role="status")
+                span.sr-only Loading...
         // Navigation
         nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top.py-3
             .container
@@ -238,7 +241,7 @@ html(lang='en')
                         a.btn.btn-primary.btn-xl(href='https://forms.gle/EWjf3NFg4sLPvmFKA' target="_blank")
                             | お問合せフォームへ
         // Twitter
-        .text-center
+        .text-center.fadeInUp
             a.twitter-timeline(data-width="400" href="https://twitter.com/pop13031?ref_src=twsrc%5Etfw") Tweets by pop13031
             script(async="" src="https://platform.twitter.com/widgets.js" charset="utf-8")
 
