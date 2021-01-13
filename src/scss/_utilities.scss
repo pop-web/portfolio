@@ -3,3 +3,9 @@
 .text-white-75 {
     color: fade-out($white, 0.25);
 }
+
+.card-columns {
+    @include media-breakpoint-only(xl) {
+        column-count: 3;
+    }
+}

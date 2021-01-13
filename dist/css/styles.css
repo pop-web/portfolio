@@ -10143,3 +10143,10 @@ header.masthead h1 {
 .text-white-75 {
   color: rgba(255, 255, 255, 0.75);
 }
+
+@media (min-width: 1200px) {
+  .card-columns {
+    -moz-column-count: 3;
+         column-count: 3;
+  }
+}
