@@ -62,7 +62,7 @@ window.onload = function() {
 }
 
 var loading = document.getElementById('loading');
-var contents = document.getElementById('page-top');
+var contents = document.getElementById('contents');
 // 読み込みが完了したら#contentsを表示して#loadingとその親要素を非表示に
 window.addEventListener('load', function () {
     loading.classList.add('d-none');
