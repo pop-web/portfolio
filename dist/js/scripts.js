@@ -74,14 +74,3 @@ window.addEventListener('load', function () {
     loading.parentNode.classList.replace('vh-100', 'd-none');
     contents.classList.remove('d-none');
 });
-
-// Reloadするときはロード中がわかるように3秒後に表示
-const reload = document.querySelector('#reload');
-reload.addEventListener('click', () => {
-    loading.classList.remove('d-none');
-    loading.parentNode.classList.replace('d-none', 'vh-100');
-    contents.classList.add('d-none');
-    window.setTimeout(() => {
-        window.location.reload(true);
-    }, 3000);
-});
